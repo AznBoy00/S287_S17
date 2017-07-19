@@ -9,9 +9,8 @@ body {
 }
 
 div.relative{
-	position: relative;
-	bottom: 50px;
-	left: 50px;
+  position: relative;
+  bottom: 50px;
 }
 #first {
 	padding: 5px;
