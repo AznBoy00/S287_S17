@@ -1,0 +1,58 @@
+/*
+	Kevin Lin - 40002383
+	Bilal Rana - 40013408
+	SOEN 287 Summer 2017
+	HTML Project
+*/
+
+body {
+	background-color: grey;
+	margin: 0;
+    padding: 0;
+    text-align: center;
+	width: 1080px;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: left;
+    width: 1080px;
+}
+
+#banner {
+	padding: 5px;
+	margin: 5px;
+	color: black;
+	border: solid;
+	width: 1080px;
+}
+
+#footer	 {
+	padding: 5px;
+	margin: 5px;
+	color: black;
+	border: solid;
+	width: 1080px;
+	text-align: center;
+}
+
+#index {
+	text-align: center;
+	width: 1080px;
+	padding: 5px;
+	margin: 5px;
+	color: black;
+	border: solid;
+	height: 500px;
+}
+
+#sidemenu {
+	text-align: left;
+	width: 200px;
+	float: left;
+	padding: 5px;
+	margin: 5px;
+	color: black;
+	border: solid;
+	height: 450px;
+}

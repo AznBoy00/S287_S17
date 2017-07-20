@@ -5,25 +5,61 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Q2_P1</title>
+	<style type = "text/css">
+		#b {
+			list-style-type: lower-alpha;
+		}
+		#c {
+			list-style-type: lower-roman;
+		}
+		#left {
+			float: left;
+			width: 500px;
+		}
+		#right {
+			float: left;
+			width: 500px;
+		}
+	</style>
 </head>
 <body>
-	<ul>
-		<li><p>Outer-1</p></li>
-		<li><p>Outer-2</p></li>
+	<div id="left">
 		<ul>
-			<li><p>Inner-1</p></li>
-			<li><p>Inner-2</p></li>
-			<li><p>Inner-3</p></li>
+			<li><p>Outer-1</p></li>
+			<li><p>Outer-2</p></li>
 			<ul>
-				<li><p>Deep-1</p></li>
+				<li><p>Inner-1</p></li>
+				<li><p>Inner-2</p></li>
+				<li><p>Inner-3</p></li>
+				<ul>
+					<li><p>Deep-1</p></li>
+				</ul>
+				<li><p>Inner-4<p></li>
+				<ul>
+					<li><p>Deep-2</p></li>
+				</ul>
 			</ul>
-			<li><p>Inner-4<p></li>
-			<ul>
-				<li><p>Deep-2</p></li>
-			</ul>
+			<li><p>Outer-3</p></li>
 		</ul>
-		<li><p>Outer-3</p></li>
-	</ul>
+	</div>
+	<div id="right">
+		<ol id = "a">
+			<li><p>Outer-1</p></li>
+			<li><p>Outer-2</p></li>
+			<ol id = "b">
+				<li><p>Inner-1</p></li>
+				<li><p>Inner-2</p></li>
+				<ol id = "c">
+					<li><p>Deep-1</p></li>
+					<li><p>Deep-2</p></li>
+				</ol>
+			</ol>
+			<li><p>Outer-3</p></li>
+			<ol id = "b">
+				<li><p>Inner-3</p></li>
+			</ol>
+		</ol>
+	</div>
 </body>
 
 </html>
