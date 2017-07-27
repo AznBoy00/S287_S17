@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--File Name and purpose -->
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Q1</title>
+	<script>
+		function addNumbers(numbers) {
+			var total = 0;
+			for (i = 0; i < numbers.length; i++) {
+				total += numbers[i];
+			}
+			return total;
+		}
+
+		function getCurrentDate() {
+			var d = new Date();
+			var day;
+			var month;
+			switch (d.getDay()) {
+				case 0:
+					day = "Sunday";
+					break;
+				case 1:
+					day = "Monday";
+					break;
+				case 2:
+					day = "Tuesday";
+					break;
+				case 3:
+					day = "Wednesday";
+					break;
+				case 4:
+					day = "Thursday";
+					break;
+				case 5:
+					day = "Friday";
+					break;
+				case 6:
+					day = "Saturday";
+					break;
+				default:
+					day = "Error";
+					break;
+			}
+			switch (d.getMonth()) {
+				case 0:
+					month = "January";
+					break;
+				case 1:
+					month = "February";
+					break;
+				case 2:
+					month = "March";
+					break;
+				case 3:
+					month = "April";
+					break;
+				case 4:
+					month = "May";
+					break;
+				case 5:
+					month = "June";
+					break;
+				case 6:
+					month = "July";
+					break;
+				case 7:
+					month = "August";
+					break;
+				case 8:
+					month = "September";
+					break;
+				case 9:
+					month = "October";
+					break;
+				case 10:
+					month = "November";
+					break;
+				case 11:
+					month = "December";
+					break;
+				default:
+					day = "Error";
+					break;
+			}
+			return day + ", " + month + " " + d.getDate() + ", " + d.getFullYear();
+		}
+
+		function arrayToString(array) {
+			//return string = array.join(); WITH COMMAS
+			
+			// Use loop to avoid commas
+			var string = "";
+			for (i = 0; i < array.length; i++) {
+				string += array[i];
+			}
+			return string;
+		}
+
+		function findMaxNumber(array) {
+			var max = array [0];
+			for (i = 0; i < array.length; i++) {
+				if (array[i] > max)
+					max = array[i];
+			}
+			return max;
+		}
+
+		function getDigits(string) {
+			var finalString = "";
+			for (i = 0; i < string.length; i++) {
+				if (string.charAt(i) >= 0 && string.charAt(i) <= 9)
+					finalString += string.charAt(i);
+			}
+			return finalString;
+		}
+
+		function reverseString(string) {
+			return string.split('').reverse().join('');
+		}
+	</script>
+</head>
+<body>
+	<script>
+		document.write("<h1>", addNumbers([1,2,3,4,5,6,7,8,9]), "</h1><br />");
+		document.write("<h2>", getCurrentDate(), "</h2><br />");
+		document.write("<h3>", arrayToString(["Aasd", "baef", "3aaa"]), "</h3><br />");
+		document.write("<h4>", findMaxNumber([1,2,3,4,6456,8888,2147000000]), "</h4><br />");
+		document.write("<h5>", getDigits("a1s2d3f4g5h6j7"), "</h5><br />");
+		document.write("<h6>", reverseString("REVERSE ME"), "</h6>");
+	</script>
+</body>
+
+</html>
