@@ -7,14 +7,18 @@
 	<title>SOEN 287 Exercise</title>
 	<script>
 		function getUserInfo() {
-			
+			var fullName = prompt("What is your full name?");
+			var age = prompt("How old are you?");
+			document.write("Hi, my name is " + fullName + " and I'm " + age + " years old.");
 		}
 	</script>
 </head>
 <body>
 	<p><strong>User Information:</strong>.<p/>
 	<div id = "content">
-		
+		<script>
+			getUserInfo();
+		</script>
 	</div>
 </body>
 </html>
