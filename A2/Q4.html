@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Exercise 4</title>
+	<script src = "Q4.js"></script>
+</head>
+<body>
+	<div id="container">
+		<h2>Order Books Online</h2>
+		<form action="" method="post" id ="frm" onsubmit = "validateForm(); return false;">
+			<fieldset>
+				<table border="0">
+					<tr>
+						<th>Book</th>
+						<th>Quantity</th>
+						<th>Price</th>
+					</tr>
+					<tr>
+						<td>Basics of C++</td>
+						<td><input type="text" size="3" id="book_1" /></td>
+						<td>$19.99</td>
+					</tr>
+					<tr>
+						<td>Program Development in Perl</td>
+						<td><input type="text" size="3" id="book_2" /></td>
+						<td>$86.00</td>
+					</tr>
+					<tr>
+						<td>Advanced JavaScript</td>
+						<td><input type="text" size="3" id="book_3" /></td>
+						<td>$55.00</td>
+					</tr>
+				</table>
+				<br /><br />
+				<input type="submit" value="Place Order" id="sub" />
+			</fieldset>
+		</form>
+	</div>
+	<br /><br /><br />
+	<p id = "confirm" />
+	</p>
+</body>
+</html>
