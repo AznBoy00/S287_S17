@@ -2,8 +2,8 @@ function searchList() {
 	var searchForm = document.forms[0]["search"].value;
 	var searchList = document.getElementById("courselist").children;
 	
-	for (var i = 0; i < document.getElementById("courselist").children.length; i++) {
-		document.getElementById("courselist").children[i].style.backgroundColor = "white";
+	for (var i = 0; i < searchList.length; i++) {
+		searchList[i].style.backgroundColor = "white";
 	}	
 	
 	if (searchForm == "") {
@@ -12,17 +12,17 @@ function searchList() {
 		return false;
 	}
 	
-	document.getElementById("a").innerHTML = "Searched: " + searchForm;
-	for (var i = 0; i < document.getElementById("courselist").children.length; i++) {
-		if (document.getElementById("courselist").children[i].textContent == searchForm) {
-			document.getElementById("courselist").children[i].style.backgroundColor = "yellow";
+	for (var i = 0; i < searchList.length; i++) {
+		if (searchList[i].textContent == searchForm) {
+			searchList[i].style.backgroundColor = "yellow";
 			return false;
 		}
 	}
-	var node = document.createElement("div");
-	var textnode = document.createTextNode(searchForm);
-	node.appendChild(textnode);
-	document.getElementById("courselist").appendChild(node);
+	
+	var newTextTag = document.createElement("div");
+	var newTextContent = document.createTextNode(searchForm);
+	newTextTag.appendChild(newTextContent);
+	document.getElementById("courselist").appendChild(newTextTag);
 	
 	return false;	
 }
