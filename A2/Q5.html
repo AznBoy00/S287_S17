@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> SOEN 287 NEW Exercise </title>
+	<style type="text/css">
+			fieldset {border:0px;}
+			#courselist {width:300px;}
+			#courselist div {border: 1px black solid;padding:10px;}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h2>Search a Course</h2>
+		<form action="" method="post" onsubmit="return searchList()">
+			<fieldset>
+				Enter the Course Name<br />
+					<input type="text" id="search" size="20" /><br />
+					<input type="submit" value="Search List" id="sub" />
+				<br /><br />
+			</fieldset>
+		</form>
+		<div id="courselist">
+			<div id="first">&nbsp;</div>
+			<div> Machine Learning </div>
+			<div> Image Processing</div>
+			<div>Design and Analysis of Algorithms</div>
+			<div>Web Programming II </div>
+			<div>Advanced JAVA</div>
+			<div>Pattern Recognition</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

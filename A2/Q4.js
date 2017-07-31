@@ -8,11 +8,11 @@ function validateForm() {
 		var cppPrice = cpp * 19.99;
 		var perlPrice = perl * 86.00;
 		var jsPrice = js * 55.00;
-		var totalCost = cppPrice + perlPrice + jsPrice;
+		var totalCost = Math.round((cppPrice + perlPrice + jsPrice)	* 100)/100;
 		document.getElementById("confirm").innerHTML = "<h3>Books you've ordered</h3>"
 														+ "<br /><em>Basics of C++</em>:     " + cpp + " x $19.99 = <strong>$" + cppPrice
 														+ "</strong><br /><em>Program Development in Perl</em>:     " + perl + " x $86.00 = <strong>$" + perlPrice
 														+ "</strong><br /><em>Advanced JavaScript</em>:     " + js + " x $55.00 = <strong>$" + jsPrice
-														+ "</strong><br /><em>The total cost is</em>: <strong>$" + totalCost;
+														+ "</strong><br /><em>The total cost is</em>: <strong>$ " + totalCost;
 	}
 }
