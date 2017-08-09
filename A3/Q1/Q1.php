@@ -16,12 +16,29 @@
     <body>
         <h1>
             <?php
-
+                $number = 23;
+                factorial($number);
+                function factorial($number) {
+                    if (is_numeric($number)) {
+                        if ($number < 2) {
+                            return 1;
+                        } else {
+                            return ($number * factorial($number - 1));
+                        }
+                    }
+                }
             ?>
         </h1>
         <h2>
             <?php
-
+                $array = array("test", "test", "TesT", "aSd", "Qwe", "zxC");
+                mostFrequent($array);
+                function mostFrequent($array) {
+                    for ($i = 0; $i < count($array); $i++) {
+                        $array[$i] = strtolower($array[$i]);
+                        echo $array[i] + ". ";
+                    }
+                }
             ?>
         </h2>
         <h3>
