@@ -1,0 +1,14 @@
+URI (Uniform Resource Identifier): http://www.site.com/index.php?age=22&name=Obi+Wan+Kenobi&number=5435432156
+
+1- What is a query string and what purpose does it serve in server-side programming?
+	A query string is a set of characters of inputs that is input to a computer/web browser so it can retrieve information from a database or page.
+	It is used to pass data from one page to another so the server can easily read the data passed such as age=22.
+
+2- Is a query string characteristic of a GET or POST request method?
+	GET request method.
+
+3- Which part of the URL is considered the query string?
+	Query String: ?age=22&name=Obi+Wan+Kenobi&number=5435432156
+
+4- How many different data parameters are being passed?
+	3 different data parameters are being passed.
