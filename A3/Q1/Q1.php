@@ -16,8 +16,7 @@
     <body>
         <h1>
             <?php
-                $number = 23;
-                factorial($number);
+                echo factorial(3);
                 function factorial($number) {
                     if (is_numeric($number)) {
                         if ($number < 2) {
@@ -29,38 +28,45 @@
                 }
             ?>
         </h1>
+        <br />
         <h2>
             <?php
-                $array = array("test", "test", "TesT", "aSd", "Qwe", "zxC");
-                mostFrequent($array);
+                echo mostFrequent(array("tesT", "tEst", "TesT", "aSd", "Qwe", "zxc", "zxc", "zxc", "zxc"));
                 function mostFrequent($array) {
                     for ($i = 0; $i < count($array); $i++) {
                         $array[$i] = strtolower($array[$i]);
-                        echo $array[i] + ". ";
                     }
+                    $counted = array_count_values($array);
+                    arsort($counted);
+                    return(key($counted));
                 }
             ?>
         </h2>
+        <br />
         <h3>
             <?php
 
             ?>
         </h3>
+        <br />
         <h4>
             <?php
 
             ?>
         </h4>
+        <br />
         <h5>
             <?php
 
             ?>
         </h5>
+        <br />
         <h6>
             <?php
 
             ?>
         </h6>
+        <br />
         <h7>
             <?php
 
