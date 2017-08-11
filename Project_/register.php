@@ -2,27 +2,6 @@
 <html>
 <head>
     <script src="registration.js"></script>
-    <style>
-        input[type = text], select{
-              width: 50%;
-              padding: 5px 8px;
-              margin: 10px 0;
-              border: 5px solid #ccc;
-              border-radius: 10px;
-                  }
-        input[type = password], select{
-              width: 50%;
-              padding: 5px 8px;
-              margin: 10px 0;
-              border: 5px solid #ccc;
-              border-radius: 10px;
-        }
-        .subbutton{
-            width: 25%;
-            cursor: pointer;
-        }
-        .error {color: #FF0000;}
-    </style>
     <meta charset="utf-8" />
     <title>MtlTechGuys - Webstore</title>
     <link rel = "stylesheet" type = "text/css" href = "style.css">
@@ -31,10 +10,9 @@
     <?php
         include 'headers/topmenu.php';
         include 'headers/sidemenu.php';
-    ?>
-    <div id = "index">
+        /**<div id = "index">
         <h2>Registration</h2>
-        <form name = "signup" method="POST" onsubmit ="" action="register_do.php">		
+        <form name = "signup" method="POST" onsubmit ="" action="?register_do.php">		
             <span class="error">* <?php echo $firstNameErr;?></span>
             <label><strong>First Name</strong></label>
             <input type="text" placeholder="Enter First Name" name="first"><br>
@@ -55,7 +33,31 @@
             <input type="password" placeholder="Enter Password" name="psw"><br>
             <button type="submit" class="subbutton">Sign Up</button>
         </form>
+    </div>**/
+    ?>
+    
+    <div id = "index">
+        <h2>Registration</h2>
+        <form name = "signup" method="POST" onsubmit ="" action="?register_do.php">
+            <label><strong>First Name</strong></label>
+            <input type="text" placeholder="Enter First Name" name="firstName"><br>
+            <label><strong>Last Name</strong></label>
+            <input type="text" placeholder="Enter Last Name" name="lastName"><br>
+            <label><strong>Email Address</strong></label>
+            <input type="text" placeholder="Enter Email" name="email"><br>
+            <label><strong>Phone Number</strong></label>
+            <input type="text" placeholder="Enter Phone Number" name="phone" ><br>
+            <label><strong>Password</strong></label>
+            <input type="password" placeholder="Enter Password" name="pw"><br>
+            <label><strong>Repeat Password</strong></label>
+            <input type="password" placeholder="Enter Password" name="confirmpw"><br>
+            <button type="submit" class="subbutton" action="validateAll();">Sign Up</button>
+        </form>
+        <?php
+            include 'register_do.php';
+        ?>
     </div>
+    
 </body>
 <footer>
     <?php
