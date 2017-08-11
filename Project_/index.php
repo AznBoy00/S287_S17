@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>MtlTechGuys - Webstore</title>
-	<link rel = "stylesheet" type = "text/css" href = "style.css">
+    <?php
+        include 'headers/header.php';
+    ?>
 </head>
 <body class = "centered">
-    <div id = "banner">
-        <?php
-            include 'topmenu.php';
-        ?>
-    </div>
-    <div id = "sidemenu">
-        <?php
-            include 'sidemenu.html';
-        ?>
-    </div>
+    <?php
+        include 'headers/topmenu.php';
+        include 'headers/sidemenu.php';
+    ?>
     <div id = "index">
         <div id = "fixed" class = "intel">
-            <img src="processor.jpg" width="130" height="130"/><br>
+            <img src="img/processor.jpg" width="130" height="130"/><br>
             <strong>Intel Core i7 7920HQ</strong><br><br>
             Fastest Intel has to offer in processor technology. Clocks in at a speed of up to 4.1GHz. Perfect for multi-tasking, working, and gaming.<br><br>
             <strong>Price: $378.99</strong><br><br><br>
             <button type="submit" value="Submit">Add to Cart</button>
         </div>
         <div  id = "fixed" class = "razer">
-        <img src ="mouse.png" width = "150" height = "130"/><br>
+        <img src ="img/mouse.png" width = "150" height = "130"/><br>
             <strong>Razer Naga Chroma</strong><br><br>
             Total of 19 buttons, allowing you to access even more abilities, macros, making sure you hit the right button at the right time, without compromise.<br><br>
             <strong> Price: $189.99</strong><br><br><br>
             <button type="submit" value="Submit">Add to Cart</button>
         </div>
         <div  id = "fixed" class = "razer">
-            <img src ="alien.jpeg" width = "150" height = "130"/><br>
+            <img src ="img/alien.jpeg" width = "150" height = "130"/><br>
             <strong>Alienware 17</strong><br><br>
                 One of a kind gaming techonolgy, Alienware has been the leading brand in laptop gaming, ensuring you are equipped with the best hardware, including VR!<br><br>
                 <strong> Price: $1,899.99</strong><br><br><br>
                 <button type="submit" value="Submit">Add to Cart</button>
         </div>
         <div  id = "fixed" class = "razer">
-        <img src ="corsair.png" width = "150" height = "130"/><br>
+        <img src ="img/corsair.png" width = "150" height = "130"/><br>
         <strong>Corsair K95 RGB</strong><br><br>
             One of a kind gaming techonolgy, Alienware has been the leading brand in laptop gaming, ensuring you are equipped with the best hardware, including VR!<br><br>
             <strong> Price: $225.99</strong><br><br><br>
             <button type="submit" value="Submit">Add to Cart</button>
         </div>
     </div>
-    <div id = "footer">
-            <img src ="footer.jpg" width="1080" height="100"/>
-            Copyright (c) 2017 MtlTechGuys All rights reserved.
-            <a href = "aboutus.html">About Us</a>
-            <a href = "contact.html">Contact</a>
-    </div>
 </body>
+<footer>
+    <?php
+        include 'headers/footer.php';
+    ?>
+</footer>
 </html>

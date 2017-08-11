@@ -22,21 +22,15 @@
     .error {color: #FF0000;}
 </style>
 <head>
-    <meta charset="utf-8" />
-    <title>MtlTechGuys - Webstore</title>
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <?php
+        include 'headers/header.php';
+    ?>
 </head>
 <body class = "centered">
-    <div id = "banner">
-        <?php
-            include 'topmenu.php';
-        ?>
-    </div>
-    <div id = "sidemenu">
-        <?php
-            include 'sidemenu.html';
-        ?>
-    </div>
+    <?php
+        include 'headers/topmenu.php';
+        include 'headers/sidemenu.php';
+    ?>
     <div id = "index">
         <form name = "Login" method="POST">
             <label><strong>Email</strong></label>
@@ -46,11 +40,10 @@
             <button type="submit" class="subbutton">Login</button>
         </form>
     </div>
-    <div id = "footer">
-        <img src ="footer.jpg" width="1080" height="100"/>
-        Copyright (c) 2017 MtlTechGuys All rights reserved.
-        <a href = "aboutus.html">About Us</a>
-        <a href = "contact.html">Contact</a>
-    </div>
 </body>
+<footer>
+    <?php
+        include 'headers/footer.php';
+    ?>
+</footer>
 </html>

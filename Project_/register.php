@@ -28,16 +28,10 @@
     <link rel = "stylesheet" type = "text/css" href = "style.css">
 </head>
 <body class = "centered">
-    <div id = "banner">
-        <?php
-            include 'topmenu.php';
-        ?>
-    </div>
-    <div id = "sidemenu">
-        <?php
-            include 'sidemenu.html';
-        ?>
-    </div>
+    <?php
+        include 'headers/topmenu.php';
+        include 'headers/sidemenu.php';
+    ?>
     <div id = "index">
         <h2>Registration</h2>
         <form name = "signup" method="POST" onsubmit ="" action="register_do.php">		
@@ -62,11 +56,10 @@
             <button type="submit" class="subbutton">Sign Up</button>
         </form>
     </div>
-    <div id = "footer">
-            <img src ="footer.jpg" width="1080" height="100"/>
-            Copyright (c) 2017 MtlTechGuys All rights reserved.
-            <a href = "aboutus.html">About Us</a>
-            <a href = "contact.html">Contact</a>
-    </div>
 </body>
+<footer>
+    <?php
+        include 'headers/footer.php';
+    ?>
+</footer>
 </html>

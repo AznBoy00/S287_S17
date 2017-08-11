@@ -2,13 +2,14 @@
 <html>
 <head>
     <?php
-        include 'header.php';
+        include 'headers/header.php';
     ?>
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body class = "centered">
     <?php
-        include 'topmenu.php';
-        include 'sidemenu.php';
+        include 'headers/topmenu.php';
+        include 'headers/sidemenu.php';
     ?>
     <div id = "index">
         <div id = "fixed" class = "intel">
@@ -43,7 +44,7 @@
 </body>
 <footer>
     <?php
-        include 'footer.php';
+        include 'headers/footer.php';
     ?>
 </footer>
 </html>
