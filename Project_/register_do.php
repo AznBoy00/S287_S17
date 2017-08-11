@@ -3,7 +3,7 @@ $firstNameErr = $lastNameErr = $noEmail = $noPhone = $noPass = $noConfirmPass = 
 $firstName = $lastName = $email = $phone = $pass = $confirmPass = "";
 
 if($_SERVER["REQUEST METHOD"] == "POST"){
-    if (empty($_POST['firstName'])) {
+    /*if (empty($_POST['firstName'])) {
         $firstNameErr = "First name is required";
     } else {
         $firstName = test_input($_POST['firstName']);
@@ -32,7 +32,17 @@ if($_SERVER["REQUEST METHOD"] == "POST"){
         $noConfirmPass = "You must confirm your password";
     } else {
         $confirmPass = test_input($_POST['confirmpw']);
-    }
+    }*/
+    
+    $error = validFirstName();
+    $error = validLastName();
+    $error = validEmail();
+    $error = validPhone();
+    $error = validPass();
+    $error = validRePass();
+    $error = matchingPass();
+    
+    
 
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -42,7 +52,7 @@ if($_SERVER["REQUEST METHOD"] == "POST"){
     $confirmPass = $_POST['confirmpw'];
 
     $fp = fopen("members.txt", "b");
-    $savedString = $firstName . ",". $lastName . "," . $email . "," . $phone . "," . $pass. "n";
+    $savedString = $firstName . " ". $lastName . " " . $email . " " . $phone . " " . $pass;
     fwrite($fp, $savedString);
     fclose($fp);
     echo "Your data has been saved!!";

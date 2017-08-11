@@ -35,11 +35,15 @@ function validPass() {
         alert("Please Fill All Required Field");
         return false;
     }
+    if (pass.length < 8) {
+        alert("Password must contain minimum 8 characters.");
+        return false;
+    }
 }
 function validRePass() {
     var confirmpass = document.forms["signup"]["confirm"].value;
     if(confirmpass == null || confirmpass == ""){
-          alert("Please Fill All Required Field");
+        alert("Please Fill All Required Field");
         return false;
     }
 }
@@ -51,4 +55,12 @@ function matchingPass() {
         alert("Passwords do not match!");
         return false;
     }
+}
+
+function validateInput(input) {
+    if(input == null || input == ""){
+        alert("Please Fill All Required Field");
+        return false;
+    }
+    return true;
 }
