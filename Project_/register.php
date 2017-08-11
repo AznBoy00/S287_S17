@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="registration.js"></script>
     <style>
         input[type = text], select{
               width: 50%;
