@@ -7,22 +7,14 @@
 </head>
 <body class = "centered">
     <div id = "banner">
-            <img src="banner.jpg" width="1080" height="100"/>
-             <script type="text/javascript" src="Time.js"></script>
-        <span id="date_time"></span>
-        <script type="text/javascript">window.onload = date_time('date_time');</script>
+        <?php
+            include 'topmenu.php';
+        ?>
     </div>
     <div id = "sidemenu">
-        <ul>
-            <li><a href = "Q6.html">Home</a></li>
-            <li><a href = "registration.html">Register</a></li>
-            <li><a href = "login.php">Login</a></li>
-            <li><a href = "fullsystem.html">Full System</a></li>
-            <li><a href = "parts.html">Computer Parts</a></li>
-            <li><a href = "accessories.html">Accessories</a></li>
-            <li><a href = "cart.html"> Cart</a></li>
-            <li><a href = "checkout.html">Checkout</a></li>
-        </ul>
+        <?php
+            include 'sidemenu.html';
+        ?>
     </div>
     <div id = "index">
         <div id = "fixed" class = "intel">

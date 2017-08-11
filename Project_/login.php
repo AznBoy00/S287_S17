@@ -28,25 +28,14 @@
 </head>
 <body class = "centered">
     <div id = "banner">
-        <img src="banner.jpg" width="1080" height="100"/>
-        <script type="text/javascript" src="Time.js"></script>
-        <span id="date_time"></span>
-        <script type="text/javascript">
-            window.onload = date_time('date_time');
-        </script>
+        <?php
+            include 'topmenu.php';
+        ?>
     </div>
     <div id = "sidemenu">
-        <ul>
-            <li><a href = "Q6.html">Home</a></li><br>
-            <li><a href = "registration.html">Register</a></li><br>
-            <li><a href = "login.php">Login</a></li><br>
-            <li><a href = "fullsystem.html">Full System</a></li><br>
-            <li><a href = "parts.html">Computer Parts</a></li><br>
-            <li><a href = "accessories.html">Accessories</a></li><br>
-            <li><a href = "cart.html"> Cart</a></li><br>
-            <li><a href = "checkout.html">Checkout</a></li><br>
-        </ul>
-        </ul>
+        <?php
+            include 'sidemenu.html';
+        ?>
     </div>
     <div id = "index">
         <form name = "Login" method="POST">
