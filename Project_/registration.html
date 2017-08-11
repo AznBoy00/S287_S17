@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type = text], select{
+      width: 50%;
+      padding: 5px 8px;
+      margin: 10px 0;
+      border: 5px solid #ccc;
+      border-radius: 10px;
+	  }
+input[type = password], select{
+      width: 50%;
+      padding: 5px 8px;
+      margin: 10px 0;
+      border: 5px solid #ccc;
+      border-radius: 10px;
+	  }
+	  .subbutton{
+			width: 25%;
+			cursor: pointer;
+	  }
+	  .error {color: #FF0000;}
+</style>
+<head>
+	<meta charset="utf-8" />
+	<title>MtlTechGuys - Webstore</title>
+	<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body class = "centered">
+	<div id = "banner">
+		<img src="banner.jpg" width="1080" height="100"/>
+		 <script type="text/javascript" src="Time.js"></script>
+    <body>
+            <span id="date_time"></span>
+            <script type="text/javascript">window.onload = date_time('date_time');</script>
+    </body>
+	</div>
+	<div id = "sidemenu">
+		<ul>
+			<li><a href = "Q6.html">Home</a></li><br>
+			<li><a href = "registration.html">Register</a></li><br>
+			<li><a href = "login.php">Login</a></li><br>
+			<li><a href = "fullsystem.html">Full System</a></li><br>
+			<li><a href = "parts.html">Computer Parts</a></li><br>
+			<li><a href = "accessories.html">Accessories</a></li><br>
+			<li><a href = "cart.html"> Cart</a></li><br>
+			<li><a href = "checkout.html">Checkout</a></li><br>
+		</ul>
+	</div>
+	<div id = "index">
+	<h2>Registration</h2>
+		<form name = "signup" method="POST" onsubmit ="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		
+				<span class="error">* <?php echo $firstNameErr;?></span>
+				<label><strong>First Name</strong></label>
+				 <input type="text" placeholder="Enter First Name" name="first"><br>
+				 <span class="error">* <?php echo $lastNameErr;?></span>
+				<label><strong>Last Name</strong></label>
+				 <input type="text" placeholder="Enter Last Name" name="last"><br>
+				<span class="error">* <?php echo $noEmail;?></span>
+				<label><strong>Email Address</strong></label>
+				 <input type="text" placeholder="Enter Email" name="email"><br>
+				 <span class="error">* <?php echo $noPhone;?></span>
+				<label><strong>Phone Number</strong></label>
+				 <input type="text" placeholder="Enter ###" name="phone" ><br>
+				 <span class="error">* <?php echo $noPass;?></span>
+				<label><strong>Password</strong></label>
+				<input type="password" placeholder="Enter Password" name="psw"><br>
+				<span class="error">* <?php echo $noConfirmPass;?></span> 
+				<label><strong>Repeat Password</strong></label>
+				<input type="password" placeholder="Enter Password" name="psw"><br>
+				<button type="submit" class="subbutton">Sign Up</button>
+		</form>
+	</div>
+	<div id = "footer">
+		<img src ="footer.jpg" width="1080" height="100"/>
+		Copyright (c) 2017 MtlTechGuys All rights reserved.
+		<a href = "aboutus.html">About Us</a>
+		<a href = "contact.html">Contact</a>
+	</div>
+</body>
+</html>
