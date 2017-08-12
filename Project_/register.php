@@ -29,7 +29,7 @@
             <input type="password" placeholder="Enter Password" name="pw"><br>
             <label><strong>Repeat Password</strong></label>
             <input type="password" placeholder="Enter Password" name="confirmpw"><br>
-            <button type="submit" class="subbutton" action="validateAll();">Sign Up</button>
+            <button type="submit" class="subbutton" action="">Sign Up</button>
         </form>
         <?php
             include 'register_do.php';

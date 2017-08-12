@@ -19,28 +19,28 @@
             <strong>Intel Core i7 7920HQ</strong><br><br>
             Fastest Intel has to offer in processor technology. Clocks in at a speed of up to 4.1GHz. Perfect for multi-tasking, working, and gaming.<br><br>
             <strong>Price: $378.99</strong><br><br><br>
-            <button type="submit" value="Submit">Add to Cart</button>
+            <button type="submit" value="Submit" name = "Intel Core i7 7920HQ|378.99" method = "GET" onclick="window.location='cart_do.php?item=Intel+Core+i7|378.99';">Add to Cart</button>
         </div>
         <div  id = "fixed" class = "razer">
         <img src ="img/mouse.png" width = "150" height = "130"/><br>
             <strong>Razer Naga Chroma</strong><br><br>
             Total of 19 buttons, allowing you to access even more abilities, macros, making sure you hit the right button at the right time, without compromise.<br><br>
             <strong> Price: $189.99</strong><br><br><br>
-            <button type="submit" value="Submit">Add to Cart</button>
+            <button type="submit" value="Submit" name = "Razer Naga Chroma|189.99" method = "GET" onclick="window.location='cart_do.php?item=Razer+Naga+Chroma|189.99';">Add to Cart</button>
         </div>
-        <div  id = "fixed" class = "razer">
+        <div  id = "fixed" class = "razer" method="POST">
             <img src ="img/alien.jpeg" width = "150" height = "130"/><br>
             <strong>Alienware 17</strong><br><br>
                 One of a kind gaming techonolgy, Alienware has been the leading brand in laptop gaming, ensuring you are equipped with the best hardware, including VR!<br><br>
                 <strong> Price: $1,899.99</strong><br><br><br>
-                <button type="submit" value="Submit">Add to Cart</button>
+                <button type="submit" value="Submit" name = "Alienware 17|1899.9" method = "GET" onclick="window.location='cart_do.php?item=Alienware+17|1899.99';">Add to Cart</button>
         </div>
-        <div  id = "fixed" class = "razer">
+        <div  id = "fixed" class = "razer" method="POST">
         <img src ="img/corsair.png" width = "150" height = "130"/><br>
         <strong>Corsair K95 RGB</strong><br><br>
             One of a kind gaming techonolgy, Alienware has been the leading brand in laptop gaming, ensuring you are equipped with the best hardware, including VR!<br><br>
             <strong> Price: $225.99</strong><br><br><br>
-            <button type="submit" value="Submit">Add to Cart</button>
+            <button type="submit" value="Submit" name = "Corsair K95 RGB|225.99" method = "GET" onclick="window.location='cart_do.php?item=Corsair+K95+RGB|225.99';">Add to Cart</button>
         </div>
     </div>
 </body>
