@@ -13,7 +13,7 @@
     ?>
     <div id = "index">
         <h2>Registration</h2>
-        <form name = "signup" method="POST" onsubmit ="validateAll();" action="">
+        <form name = "signup" method="POST" onsubmit ="validFirstName(); validLastName(); validEmail(); validPhone(); validPass(); validRePass(); matchingPass();" action="">
             <label><strong>First Name</strong></label>
             <input type="text" placeholder="Enter First Name" name="firstName"><br>
             <label><strong>Last Name</strong></label>
@@ -28,7 +28,9 @@
             <input type="password" placeholder="Enter Password" name="confirmpw"><br>
             <button type="submit" class="subbutton" action="validateAll();">Sign Up</button>
         </form>
-        
+        <?php
+            include 'register_do.php';
+        ?>
     </div>
 </body>
 <footer>

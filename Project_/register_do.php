@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo $noConfirmPass . "/n";
         }
     } else {
-        $file = fopen("members.txt", "w");
+        $file = fopen("db/members.txt", "w");
         $savedString = "" . $firstName . " ". $lastName . " " . $email . " " . $phone . " " . $pass . "\n";
         fwrite($file, $savedString);
         fclose($file);

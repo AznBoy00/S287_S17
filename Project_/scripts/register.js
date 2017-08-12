@@ -1,13 +1,3 @@
-function validateAll() {
-    validFirstName();
-    validLastName();
-    validEmail();
-    validPhone();
-    validPass();
-    validRePass();
-    matchingPass();
-}
-
 function validFirstName() {
     var fName = document.forms["signup"]["firstName"].value;
     if (fName==null || fName=="") {
@@ -16,7 +6,7 @@ function validFirstName() {
     }
 }
 function validLastName() {
-    var lName = document.forms["signup"]["lastname"].value;
+    var lName = document.forms["signup"]["lastName"].value;
     if (lName==null || lName=="") {
         alert("Last name is required");
         return false;
