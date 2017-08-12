@@ -60,8 +60,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo $noConfirmPass . "/n";
         }
     } else {
-        $file = fopen("db/members.txt", "w");
-        $savedString = $firstName . "|". $lastName . "|" . $email . "|" . $phone . "|" . $pass . "|\n";
+        $file = fopen("db/members.txt", "a");
+        $savedString = $firstName . "|". $lastName . "|" . $email . "|" . $phone . "|" . $pass . "|" . PHP_EOL;
         fwrite($file, $savedString);
         fclose($file);
         echo "Account created!";

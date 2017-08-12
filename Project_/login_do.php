@@ -18,6 +18,8 @@ if (isset($_POST['login'])) {
     if ($success) {
         $_SESSION["login"] = $email;
         echo "<br> Hi $email you have been logged in. <br>";
+        header("Location: index.php");
+        exit();
     } else {
         echo "<br> You have entered the wrong username or password. Please try again. <br>";
     }
