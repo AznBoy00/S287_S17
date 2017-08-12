@@ -11,10 +11,16 @@ and open the template in the editor.
             <ul>
                 <li><a href = "index.php">Home</a><br /></li>
                 <li><a href = "register.php">Register</a><br /></li>
-                <li><a href = "login.php">Login</a><br /></li>
-                <li><a href = "fullsystem.php">Full System</a><br /></li>
-                <li><a href = "cart.php"> Cart</a><br /></li>
-                <li><a href = "checkout.php">Checkout</a><br /></li>
+                <li><a href = "fullsystem.php">Full System</a><br /></li> 
+                <?php
+                    if(isset($_SESSION["login"])) {
+                        echo      '<li><a href = "cart.php">Cart</a><br /></li>'
+                                . '<li><a href = "checkout.php">Checkout</a><br /></li>'
+                                . '<li><a href = "index.php?logout_do.php">Logout</a><br /></li>';
+                    } else {
+                        echo '<li><a href = "login.php">Login</a><br /></li>';
+                    }
+                ?>
             </ul>
         </div>
     </body>

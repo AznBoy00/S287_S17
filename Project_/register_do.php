@@ -6,13 +6,6 @@ $noPhone = "";
 $noPass = "";
 $noConfirmPass = "";
 
-$firstName = "";
-$lastName = "";
-$email = "";
-$phone = "";
-$pass = "";
-$confirmPass = "";
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -68,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     } else {
         $file = fopen("db/members.txt", "w");
-        $savedString = "" . $firstName . " ". $lastName . " " . $email . " " . $phone . " " . $pass . "\n";
+        $savedString = $firstName . "|". $lastName . "|" . $email . "|" . $phone . "|" . $pass . "|\n";
         fwrite($file, $savedString);
         fclose($file);
         echo "Account created!";

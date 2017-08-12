@@ -1,30 +1,13 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
-<style>
-    input[type = text], select{
-        width: 50%;
-        padding: 5px 8px;
-        margin: 10px 0;
-        border: 5px solid #ccc;
-        border-radius: 10px;
-    }
-    input[type = password], select{
-        width: 50%;
-        padding: 5px 8px;
-        margin: 10px 0;
-        border: 5px solid #ccc;
-        border-radius: 10px;
-    }
-    .subbutton{
-        width: 25%;
-        cursor: pointer;
-    }
-    .error {color: #FF0000;}
-</style>
 <head>
     <?php
         include 'headers/header.php';
     ?>
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body class = "centered">
     <?php
@@ -32,13 +15,17 @@
         include 'headers/sidemenu.php';
     ?>
     <div id = "index">
-        <form name = "Login" method="POST">
+        <h2>Registration</h2>
+        <form name = "login" method="POST" onsubmit="index.php">
             <label><strong>Email</strong></label>
-            <input type="text" placeholder="Enter Email" name="email"><br>
+            <input type = "text" placeholder = "Email" name = "email"><br>
             <label><strong>Password</strong></label>
-            <input type="password" placeholder="Enter Password" name="password"><br>
-            <button type="submit" class="subbutton">Login</button>
+            <input type = "password" placeholder = "Password" name = "pw"><br>
+            <button type = "submit" class = "subbutton" value = "login" name = "login">Login</button>
         </form>
+        <?php
+            include 'login_do.php';
+        ?>
     </div>
 </body>
 <footer>
