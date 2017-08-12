@@ -2,7 +2,8 @@
 $firstNameErr = "";
 $lastNameErr = "";
 $noEmail = "";
-$noPhone = "";$noPass = "";
+$noPhone = "";
+$noPass = "";
 $noConfirmPass = "";
 
 $firstName = "";
@@ -19,52 +20,58 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $phone = $_POST['phone'];
     $pass = $_POST['pw'];
     $confirmPass = $_POST['confirmpw'];
-    
-    /**if (empty($_POST['firstName'])) {
+
+    if (empty($_POST['firstName'])) {
         $firstNameErr = "First name is required";
-    } else {
-        $firstName = test_input($_POST['firstName']);
     }
     if(empty($_POST['lastName'])){
         $lastNameErr = "Last name is required";
-    } else {
-        $lastName = test_input($_POST['lastName']);
     }
     if(empty($_POST['email'])){
         $noEmail = "Email is required";
-    } else { 
-        $email = test_input($_POST['email']);
     }
     if(empty($_POST['phone'])){
         $noPhone = "Phone number is required";
-    } else {
-        $phone = test_input($_POST['phone']);
     }
     if(empty($_POST['pw'])){
         $noPass = "Password is required";
-    } else {
-        $pass = test_input($_POST['pw']);
     }
     if(empty($_POST['confirmpw'])){
         $noConfirmPass = "You must confirm your password";
-    } else {
-        $confirmPass = test_input($_POST['confirmpw']);
-    }**/
-    
-    include 'scripts/register.js';
-    echo(validateAll($firstName, $lastName, $email, $phone, $pw, $confirmpw));
-    
-    $file = fopen("members.txt", "w");
-    $savedString = "" . $firstName . " ". $lastName . " " . $email . " " . $phone . " " . $pass . "\n";
-    fwrite($file, $savedString);
-    fclose($file);
-    echo "Your data has been saved!!";
-    
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
     }
+    if(empty($_POST['pw']) != empty($_POST['confirmpw'])) {
+        $noPass = "Passwords do not match.";
+    }
+    if(strlen($_POST['pw']) < 8) {
+        $noPass = "Passwords has to contain at least 8 characters.";
+    }
+    echo "<br><br>";
+    if ($firstNameErr != "" || $lastNameErr != "" || $noEmail != "" || $noPhone != "" || $noPass != "" || $noConfirmPass != "") {
+        if ($firstNameErr != "") {
+            echo $firstNameErr . "<br>";
+        }
+        if ($lastNameErr != "") {
+            echo $lastNameErr . "<br>";
+        }
+        if ($noEmail != "") {
+            echo $noEmail . "<br>";
+        }
+        if ($noPhone != "") {
+            echo $noPhone . "<br>";
+        }
+        if ($noPass != "") {
+            echo $noPass . "<br>";
+        }
+        if ($noConfirmPass != "") {
+            echo $noConfirmPass . "/n";
+        }
+    } else {
+        $file = fopen("members.txt", "w");
+        $savedString = "" . $firstName . " ". $lastName . " " . $email . " " . $phone . " " . $pass . "\n";
+        fwrite($file, $savedString);
+        fclose($file);
+        echo "Account created!";
+    }
+    
 }
 ?>

@@ -35,7 +35,6 @@
         </form>
     </div>**/
     ?>
-    
     <div id = "index">
         <h2>Registration</h2>
         <form name = "signup" method="POST" onsubmit ="" action="?register_do.php">
@@ -57,7 +56,6 @@
             include 'register_do.php';
         ?>
     </div>
-    
 </body>
 <footer>
     <?php
