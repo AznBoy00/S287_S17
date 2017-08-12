@@ -11,14 +11,14 @@ function validateAll() {
 function validFirstName() {
     var fName = document.forms["signup"]["firstName"].value;
     if (fName==null || fName=="") {
-        alert("Please Fill All Required Field");
+        alert("First name is required");
         return false;
     }
 }
 function validLastName() {
     var lName = document.forms["signup"]["lastname"].value;
     if (lName==null || lName=="") {
-        alert("Please Fill All Required Field");
+        alert("Last name is required");
         return false;
     }
 }
@@ -26,7 +26,7 @@ function validLastName() {
 function validEmail() {
     var email = document.forms["signup"]["email"].value;
     if(email == null || email == ""){	  
-        alert("Please Fill All Required Field");
+        alert("Email is required");
         return false;
     }
 }
@@ -34,7 +34,7 @@ function validEmail() {
 function validPhone() {
     var phone = document.forms["signup"]["phone"].value;
     if(phone == null || phone == ""){
-        alert("Please Fill All Required Field");
+        alert("Phone number is required");
         return false;
     }
 }
@@ -42,18 +42,18 @@ function validPhone() {
 function validPass() {
     var pass = document.forms["signup"]["pw"].value;
     if(pass == null || pass == ""){
-        alert("Please Fill All Required Field");
+        alert("Password is required");
         return false;
     }
     if (pass.length < 8) {
-        alert("Password must contain minimum 8 characters.");
+        alert("Passwords has to contain at least 8 characters.");
         return false;
     }
 }
 function validRePass() {
     var confirmpass = document.forms["signup"]["confirmpw"].value;
     if(confirmpass == null || confirmpass == ""){
-        alert("Please Fill All Required Field");
+        alert("You must confirm your password.");
         return false;
     }
 }
@@ -62,7 +62,7 @@ function matchingPass() {
     var confirmpass = document.forms["signup"]["confirm"].value;
     var pass = document.forms["signup"]["pass"].value;
     if(confirmpass == pass){
-        alert("Passwords do not match!");
+        alert("Passwords do not match.");
         return false;
     }
 }

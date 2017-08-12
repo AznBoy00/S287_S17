@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $noPass = "Password is required";
     }
     if(empty($_POST['confirmpw'])){
-        $noConfirmPass = "You must confirm your password";
+        $noConfirmPass = "You must confirm your password.";
     }
     if(empty($_POST['pw']) != empty($_POST['confirmpw'])) {
         $noPass = "Passwords do not match.";
@@ -47,6 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     echo "<br><br>";
     if ($firstNameErr != "" || $lastNameErr != "" || $noEmail != "" || $noPhone != "" || $noPass != "" || $noConfirmPass != "") {
+        
         if ($firstNameErr != "") {
             echo $firstNameErr . "<br>";
         }
