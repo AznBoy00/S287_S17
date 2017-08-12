@@ -1,41 +1,46 @@
-function validateAll(fName, lName, email, phone, pass, confirmpass) {
-    validFirstName(fName);
-    validLastName(lName);
-    validEmail(email);
-    validPhone(phone);
-    validPass(pass);
-    validRePass(confirmpass);
-    matchingPass(pass, confirmpass);
+function validateAll() {
+    validFirstName();
+    validLastName();
+    validEmail();
+    validPhone();
+    validPass();
+    validRePass();
+    matchingPass();
 }
 
-function validFirstName(fName) {
+function validFirstName() {
+    var fName = document.forms["signup"]["firstName"].value;
     if (fName==null || fName=="") {
         alert("Please Fill All Required Field");
         return false;
     }
 }
-function validLastName(lName) {
+function validLastName() {
+    var lName = document.forms["signup"]["lastname"].value;
     if (lName==null || lName=="") {
         alert("Please Fill All Required Field");
         return false;
     }
 }
 
-function validEmail(email) {
+function validEmail() {
+    var email = document.forms["signup"]["email"].value;
     if(email == null || email == ""){	  
         alert("Please Fill All Required Field");
         return false;
     }
 }
 
-function validPhone(phone) {
+function validPhone() {
+    var phone = document.forms["signup"]["phone"].value;
     if(phone == null || phone == ""){
         alert("Please Fill All Required Field");
         return false;
     }
 }
 
-function validPass(pass) {
+function validPass() {
+    var pass = document.forms["signup"]["pw"].value;
     if(pass == null || pass == ""){
         alert("Please Fill All Required Field");
         return false;
@@ -45,14 +50,17 @@ function validPass(pass) {
         return false;
     }
 }
-function validRePass(confirmpass) {
+function validRePass() {
+    var confirmpass = document.forms["signup"]["confirmpw"].value;
     if(confirmpass == null || confirmpass == ""){
         alert("Please Fill All Required Field");
         return false;
     }
 }
 
-function matchingPass(pass, confirmpass) {
+function matchingPass() {
+    var confirmpass = document.forms["signup"]["confirm"].value;
+    var pass = document.forms["signup"]["pass"].value;
     if(confirmpass == pass){
         alert("Passwords do not match!");
         return false;

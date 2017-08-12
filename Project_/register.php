@@ -37,7 +37,7 @@
     ?>
     <div id = "index">
         <h2>Registration</h2>
-        <form name = "signup" method="POST" onsubmit ="" action="?register_do.php">
+        <form name = "signup" method="POST" onsubmit ="validateAll();" action="?register_do.php">
             <label><strong>First Name</strong></label>
             <input type="text" placeholder="Enter First Name" name="firstName"><br>
             <label><strong>Last Name</strong></label>
